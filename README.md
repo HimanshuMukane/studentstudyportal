@@ -12,35 +12,22 @@ Student life, often mentioned as the "seed time" of life is undoubtedly the most
 
 This app is bundled with 8 different modules with their own use cases starting from a simple To Do list to a wikipedia integration. And everything is tied together with simple intuitive layout for an easy workflow. 
 
-## Installation
+## Commands
 
-We provided with 2 ways to install the app. 
+pip install virtualenv
 
-- By installing the installer from the releases
-- By running the script
+virtualenv env
 
-We recommend using the installer if you don't have python properly installed in your machine.
-https://github.com/FirePlank/Student-Portal/releases
+.\env\scripts\activate
 
-However, if you want to run the scripts, then you must have [python](https://www.python.org/downloads/) and [git](https://git-scm.com/downloads) properly installed in your machine. Then use these 5 simple commands to run the app.
+pip install -r req.txt
 
-```bash
-git clone https://github.com/FirePlank/Student-Portal.git # it clones the repository in your machine
+python manage.py runserver
 
-cd Student-Portal # Change your working directory
-
-pip install -r requirements.txt # Install all the dependencies, might take time depending on your internet speed
-
-cd app # Again change the directory
-
-python main.py # Run the app
 ```
 
 Now enjoy the app 😉. 
 
-Here is a simple gif on how to install it if you are still confused.
-
-![how to install](http://res.cloudinary.com/muhimen/image/upload/v1604124914/sp_how_to_install.gif)
 
 ## USAGE
 
@@ -91,14 +78,3 @@ YouTube's homepage recommendations can often be a bit distracting when you are t
 Allows you to customize the app appearance. Also, view the search history for `Wikipedia`, `YouTube` and `Books` module.
 
 ![how to settings](http://res.cloudinary.com/muhimen/image/upload/v1604124914/sp_how_to_settings.gif)
-
-## Contributions
-pip install virtualenv
-
-virtualenv env
-
-.\env\scripts\activate
-
-pip install -r req.txt
-
-python manage.py runserver
