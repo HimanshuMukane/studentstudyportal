@@ -4,7 +4,32 @@
 
 <head>
     <title>Google Translate API</title>
-
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+        @font-face {
+            font-family: "Google Sans";
+            src: url(https://assistant.mish.io/assets/fonts/gsans.ttf);
+        }
+        
+        body {
+            margin: 0;
+            text-align: center;
+        }
+        
+        .topbar {
+            height: 40px;
+            background-color: white;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            color: #6666ff;
+        }
+        
+        textarea {
+            width: 30vw;
+            height: 10vw;
+        }
+    </style>
 </head>
 
 <body translate="no">
@@ -24,7 +49,7 @@
 
             var sourceText = $('textarea#sourceText').val();
             var sourceLang = 'en';
-            var targetLang = 'ma';
+            var targetLang = 'hi';
             console.log(sourceText);
             var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
             //console.log(url);

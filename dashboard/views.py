@@ -13,6 +13,9 @@ from youtubesearchpython import VideosSearch
 def home(request):
     return render(request,'dashboard/home.html')
 
+def index(request):
+    return render(request,'dashboard/index.html')
+
 @login_required
 def notes(request):
     if request.method == 'POST':
