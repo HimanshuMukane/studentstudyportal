@@ -3,6 +3,9 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'css/pages.css' %}" />
+
+
 <div class="container">
 {% if not todo_done %}
     <table class="table table-striped table-bordered table-hover table-dark">
