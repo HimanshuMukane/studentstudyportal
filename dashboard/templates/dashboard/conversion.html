@@ -1,45 +1,34 @@
-{% extends 'dashboard/base.html' %} 
-{% load static %} 
-{% load crispy_forms_tags %}
-{% block content %}
+{% extends 'dashboard/base.html' %} {% load static %} {% load crispy_forms_tags %} {% block content %}
 <div class="container text-center">
-    <form method="POST">
-        {% csrf_token %}
-        <div class="form-group">
-            <legend class="border-bottom mb-4"></legend>
-            {{form|crispy}}
-            <button href="" class="btn btn-outline-info" type="submit">
-                Select
-            </button>
-        </div>
-        {% if input %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4"></legend>
-            <div class="row">
-                <div class="col-md-4">
-                    {{m_form.input|as_crispy_field}}
-                </div>
-                <div class="col-md-4">
-                    {{m_form.measure1|as_crispy_field}}
-                </div>
-                <div class="col-md-4">
-                    {{m_form.measure2|as_crispy_field}}
-                </div>
-                
-            </div>
-            
+    <div id="main-content">
 
-        </fieldset>
-        <fieldset class="form-group">
-            {{answer}}
-        </fieldset>
-        <div class="form-group">
-            <button href="" class="btn btn-outline-info" type="submit">
-                Convert
-            </button>
+        <h1 id="quantity-title"></h1>
+
+        <div id="unitSelector">
+            <div class="unitCaption">Type</div>
+            <div class="unitArea">
+                <select id="selectQuantity" class="selectOption" onchange="loadQuantity(this.selectedIndex)"></select>
+            </div>
         </div>
-        {% endif %}
-    </form>
+
+        <div id="calculator">
+            <div class="unitCaption">From
+                <div class="rightButton" onclick="switchUnits();"></div>
+            </div>
+
+            <div class="unitArea">
+                <div class="unitLeft"><input id="inputFrom" class="inputNumber" type="number" step="any" value="1" onkeyup="ie9minusConvert();" oninput="convert();"></div>
+                <div class="unitRight"><select id="selectFrom" class="selectOption inputOption" onchange="onChangeUnit();"></select></div>
+            </div>
+
+            <div class="unitCaption">To</div>
+            <div class="unitArea">
+                <div class="unitLeft"><input id="inputTo" class="inputNumber" type="number" step="any" value="" onkeyup="ie9minusConvertBack();" oninput="convertBack();"></div>
+                <div class="unitRight"><select id="selectTo" class="selectOption inputOption" onchange="onChangeUnit();"></select></div>
+                <div id="conversionInfo"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}
