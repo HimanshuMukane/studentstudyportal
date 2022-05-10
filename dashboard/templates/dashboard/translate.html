@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Google Translate API</title>
+
+</head>
+
+<body translate="no">
+    <textarea id="sourceText"></textarea>
+    <textarea id="resultText"></textarea>
+    <br>
+    <input id="button" type="button" value="Translate" />
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script id="rendered-js">
+        $('#button').click(function() {
+            translate();
+        });
+
+        function translate() {
+
+            var sourceText = $('textarea#sourceText').val();
+            var sourceLang = 'en';
+            var targetLang = 'ma';
+            console.log(sourceText);
+            var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
+            //console.log(url);
+            $.getJSON(url, function(data) {
+                $('textarea#resultText').val(data[0][0][0]);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
