@@ -4683,7 +4683,6 @@ tbody.collapse.show {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 2.25rem;
-    color:  blue;
 }
 
 .card-title {
@@ -9030,7 +9029,7 @@ button.bg-dark:hover {
 }
 
 .text-center {
-    text-align: center!important
+    text-align: center!important;
 }
 
 @media (min-width:576px) {

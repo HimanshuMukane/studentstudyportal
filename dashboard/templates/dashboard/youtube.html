@@ -5,10 +5,16 @@
 
 <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
 
+<div class="border-top pt-3 text-center">
+
+    <small class="text-muted"><a class="btn btn-danger" href="{% url 'index' %}">Go To Home Page</a>
+  </small>
+</div>
 
 <section class='text-center container'>
-    <h2>Search Videos in Youtube</h2>
-    <p>search videos and select any video to open in youtube</p>
+    <div class="youtube"><h2 ="white">Search Videos in Youtube</h2>
+        <p>search videos and select any video to open in youtube</p>
+    </div>
     <form action="" method="post">
         {% csrf_token %}
         {{form|crispy}}
