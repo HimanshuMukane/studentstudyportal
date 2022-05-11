@@ -56,7 +56,7 @@ img {
 
 body {
     font-family: var(--body-font);
-    color: var(--body-color);
+    color: #dbdddf;
     background-image: url("https://i.gifer.com/V9V.gif");
     background-position: center;
     background-size: cover;
@@ -218,7 +218,7 @@ body:before {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--body-color);
+    color: #dbdddf;
 }
 
 .side-menu a+a {
@@ -856,7 +856,7 @@ body:before {
 
 .chat-header span {
     margin-left: auto;
-    color: var(--body-color);
+    color: #dbdddf;
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -977,7 +977,7 @@ body:before {
 
 .chat-vid__by,
 .chat-vid__info {
-    color: var(--body-color);
+    color: #dbdddf;
     font-size: 13px;
 }
 

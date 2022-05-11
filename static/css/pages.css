@@ -17,7 +17,6 @@ body {
     color: #222;
 }
 
-
 html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -39,14 +38,14 @@ img {
 
 body {
     font-family: var(--body-font);
-    color: var(--body-color);
+    color: #dbdddf;
     background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fgist.github.com%2Fcarloscabo%2Fe5a2060b715f74545f98&psig=AOvVaw3qn2XSpJ7oa3cezLRolmVb&ust=1652297366437000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiC7r7V1fcCFQAAAAAdAAAAABAD");
     background-blend-mode: color-dodge;
     background-color: rgba(18, 21, 39, 0.86);
 }
 
 .logo-expand {
-    text-decoration:dashed;
+    text-decoration: dashed;
     padding-top: 10px;
     text-align: center;
     color: #fff;
@@ -57,13 +56,14 @@ body {
     top: 0;
 }
 
-.card-body{
-    color:rgb(255, 0, 34);
+.card-body {
+    color: rgb(255, 0, 34);
 }
 
-.youtube{
-    color:aqua;
+.youtube {
+    color: aqua;
 }
+
  ::-webkit-scrollbar {
     width: 6px;
     border-radius: 10px;
