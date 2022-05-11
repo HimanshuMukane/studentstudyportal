@@ -35,6 +35,8 @@
     .conversions {
         width: 800px;
         height: 600px;
+        color: #fff;
+    font-size: 20px;
     }
     
     .lists,
@@ -44,6 +46,14 @@
 </style>
 
 <body translate="no">
+    <div class="border-top pt-3 text-center">
+
+        <small class="text-muted"><a class="btn btn-danger" href="{% url 'index' %}">Go To Home Page</a>
+      </small>
+    </div>
+    <fieldset class="form-group">
+        <legend class="logo-expand">Conversion</legend>
+    </fieldset>
     <ul class="lists">
         <li>
             <div class="conversions">
