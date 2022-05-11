@@ -60,10 +60,13 @@ body {
     color: rgb(255, 0, 34);
 }
 
+<<<<<<< Updated upstream
 .youtube {
     color: aqua;
 }
 
+=======
+>>>>>>> Stashed changes
  ::-webkit-scrollbar {
     width: 6px;
     border-radius: 10px;
